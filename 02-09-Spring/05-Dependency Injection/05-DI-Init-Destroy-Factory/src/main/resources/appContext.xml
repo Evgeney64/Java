@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="classicalMusicId"
+          class="ru.test.ClassicalMusic"
+          init-method="Init"
+          destroy-method="Destroy"
+          factory-method="getClassicalMusic"
+    />
+<!--    <bean id="rockMusicId" class="ru.test.RockMusic" />-->
+<!--    <bean id="discoMusicId" class="ru.test.DiscoMusic" />-->
+
+<!--    <bean id="musicPlayerId" class="ru.test.MusicPlayer" >-->
+<!--        <property name="musicList">-->
+<!--            <list>-->
+<!--                <ref bean="classicalMusicId"/>-->
+<!--                <ref bean="rockMusicId"/>-->
+<!--                <ref bean="discoMusicId"/>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--        <property name="name" value="Петр Ильич Чайковский" />-->
+<!--        <property name="volume" value="1912" />-->
+<!--    </bean>-->
+</beans>
