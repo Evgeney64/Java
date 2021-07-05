@@ -1,6 +1,6 @@
 git add .
 
-git commit -m "20210702-02"
+git commit -m "20210705-02"
 
 rem ************* git remote add origin https://github.com/Evgeney64/Java.git
 
