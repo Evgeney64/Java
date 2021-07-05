@@ -13,6 +13,11 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Controller
 @RequestMapping("/first")
+
+// http://localhost:8080/my.mvc.test/first/hello
+// http://localhost:8080/my.mvc.test/first/hello1?name=Tom&surname=Soyer
+// http://localhost:8080/my.mvc.test/first/calculator?a=10&b=3&action=division
+// http://localhost:8080/my.mvc.test/first/calculator?a=10&b=2&action=multiplication
 public class FirstController {
 
     @GetMapping("/hello")

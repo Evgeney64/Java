@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 @RequestMapping("/first")
+// http://localhost:8080/spring-mvc-app1/first/hello
 public class FirstController {
 
     @GetMapping("/hello")

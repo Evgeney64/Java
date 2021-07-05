@@ -13,7 +13,8 @@ import mvc.dao.PersonDAO;
  */
 @Controller
 @RequestMapping("/people")
-//http://localhost:8080/my.mvc.test/people
+// http://localhost:8080/my.mvc.test/people
+// http://localhost:8080/my.mvc.test/people/1
 public class PeopleController {
 
     private final PersonDAO personDAO;

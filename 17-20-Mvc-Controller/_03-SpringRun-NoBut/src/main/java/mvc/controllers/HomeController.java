@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 //@Controller
 //@ResponseBody
 @RequestMapping("/first")
+// http://localhost:8080/my.mvc.test/first/hello
 public class HomeController {
     public static void main(String[] args) {
         SpringApplication.run(HomeController.class, args);

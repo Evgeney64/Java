@@ -14,6 +14,7 @@ import mvc.models.Person;
 @Controller
 @RequestMapping("/people")
 // http://localhost:8080/my.mvc.test/people/new
+// настроить SQL Server в ConnectionTest ("jdbc:sqlserver://192.168.168.175:1433;"))
 public class PeopleController {
 
     private final PersonDAO personDAO;

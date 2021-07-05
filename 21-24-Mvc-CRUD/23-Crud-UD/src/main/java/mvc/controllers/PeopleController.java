@@ -13,7 +13,10 @@ import mvc.models.Person;
  */
 @Controller
 @RequestMapping("/people")
-// http://localhost:8080/my.mvc.test/people/new
+// http://localhost:8080/my.mvc.test/people
+// http://localhost:8080/my.mvc.test/people/1
+// http://localhost:8080/my.mvc.test/people/new?
+// http://localhost:8080/my.mvc.test/people/1/edit?
 public class PeopleController {
 
     private final PersonDAO personDAO;
