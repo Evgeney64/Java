@@ -1,5 +1,5 @@
-
 Ext.onReady(function(){
+
 Ext.define('User', {
            extend: 'Ext.data.Model',
                      
