@@ -1,0 +1,68 @@
+----------------------------------------------------
+c# .Net.Core
+
+	1. async / await (thread)
+		- https://habr.com/ru/post/470830/
+		- https://habr.com/ru/post/162353/
+
+		- https://docs.microsoft.com/ru-ru/dotnet/csharp/programming-guide/concepts/async/
+
+		- https://coderoad.ru/30454613/C-%D0%B0%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9-%D0%B2%D1%8B%D0%B7%D0%BE%D0%B2-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%B0-%D0%B2%D0%BF%D0%BB%D0%BE%D1%82%D1%8C-%D0%B4%D0%BE-Main
+		- https://coderoad.ru/13002507/%D0%9A%D0%B0%D0%BA-%D1%8F-%D0%BC%D0%BE%D0%B3%D1%83-%D0%B2%D1%8B%D0%B7%D0%B2%D0%B0%D1%82%D1%8C-%D0%B0%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4-%D0%B2-Main
+
+	2. DI (Dependency Injection)
+
+	3. Middle Ware
+
+	4. EntityFramework (Navigation properties)
+
+	5. Authentification (OWIN)
+
+	6. Services
+
+----------------------------------------------------
+Js / CSS
+
+	1. typescript
+
+	2. Js / CSS
+
+	3. Visual Studio Code (редактор для Js)
+
+----------------------------------------------------
+DB
+
+	1. NoSQL DB (Mongoose)
+
+	2. PostgreSQL
+
+	3. Oracle
+
+	4. Big Data
+
+----------------------------------------------------
+Java
+	1. Spring
+	2. SpringBoot
+	3. Maven
+	4. Gradle
+	5. Hibernate
+
+----------------------------------------------------
+Products
+
+	1. Node Js
+
+	2. React
+
+	3. Swagger
+
+	4. Kestrel
+
+	5. Micro services / Docker
+		- https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/container-docker-introduction/docker-defined
+
+	6. Git / GitHub
+
+
+----------------------------------------------------

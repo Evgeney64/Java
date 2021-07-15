@@ -27,7 +27,7 @@ function TodoItem({ todo, index, onChange }) {
   if (todo.completed){
     classes.push('done');
   }
-
+// set PATH=%PATH%;c:\DISC_C\_Setup\Java\node-v16.4.2
   return (
     <li style={styles.li} >
         <span className={classes.join(' ')} >

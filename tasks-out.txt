@@ -1,0 +1,36 @@
+Server ----------------------------------------------------
+
+Appache
+Nginx (npm, npx) - "Web Servers" category (Игорь Сысоев)
+NodeJs - "Frameworks (Full Stack)"
+Kestrel
+
+
+JavaScript ----------------------------------------------------
+
+JQuery
+TypeScript
+Kendo (kendo.js)
+ExtJs (ext-all.js)
+
+
+Framwork ----------------------------------------------------
+
+React
+Angular
+
+
+Solution ----------------------------------------------------
+
+React => NodeJs => Nginx
+
+
+Compare ----------------------------------------------------
+
+Appache vs Nginx
+
+Nginx vs NodeJs
+
+Java EE vs Spring
+
+Angular vs React
