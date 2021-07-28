@@ -1,64 +1,31 @@
-function hello(){
-    console.log("Привет !!! ", this)
-}
-const person = {
-    name: 'Владилен',
-    age: 25,
-    sayHello: hello,
-
-    // привязка контекста
-    sayHelloWindow: hello.bind(window),
-    sayHelloThis: hello.bind(this),
-    sayHelloDocument: hello.bind(document),
-    // ........................
-
-    logInfo: function(job, phone){
-        // обратные кавычки <~,Ё> в нижнем регистре
-        console.group(`Информация по объекту ${this.name}:`)
-        console.log(`имя объекта ${this.name}`)
-        console.log(`его возраст ${this.age}`)
-        console.log(`место работы ${job}`)
-        console.log(`телефон ${phone}`)
-        console.groupEnd()
+function createCalcFunction(n){
+    return function(){
+        console.log(1000 * n)
     }
 }
+const calc = createCalcFunction(42)
+calc()
 
-const lena = {
-    name: 'Лена',
-    age: 23,
+// -----------------------------------------
+function createIncrementor(n){
+    return function(num){
+        return n + num
+    }
 }
+const addOne = createIncrementor(1)
+console.log(addOne(10))
+console.log(addOne(41))
 
-//person.logInfo.bind(lena)();
-//fnLenaInfoLog()
+const addTen = createIncrementor(10)
+console.log(addTen(10))
+console.log(addTen(41))
 
-const fnLenaInfoLog = person.logInfo.bind(lena)
-//fnLenaInfoLog('Программист', '+7(922)-204-3348')
-
-const fnLenaInfoLog1 = person.logInfo.bind(lena, 'Программист', '+7(922)-204-3348')
-//fnLenaInfoLog1()
-
-// call()
-//person.logInfo.call(lena, 'Программист', '+7(922)-204-3348')
-
-// apply()
-//person.logInfo.apply(lena, ['Программист', '+7(922)-204-3348'])
-
-/// ------------------------------------------
-/// Контекст и прототипы
-const array = [1, 2, 3, 4, 5]
-
-function multBy(arr, n){
-    return arr.map(function(item){
-        return item * n
-        })
+// -----------------------------------------
+function urlGenerator(domain){
+    return function(url){
+        return `https://${url}.${domain}`
+    }
 }
-// console.log(multBy(array, 5))
-
-Array.prototype.multBy1 = function(n){
-    //console.log('multBy1', this)
-    return this.map(function(item){
-        return item * n
-        })
-}
-// console.log(array.multBy1(5))
-// [10, 20, 30, 40, 50].multBy1(5)
+const comUrl = urlGenerator('com')
+console.log(comUrl('google'))
+console.log(comUrl('yandex'))
