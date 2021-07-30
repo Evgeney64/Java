@@ -1,95 +1,67 @@
-Ext.onReady(function(){
-    var radioGroupAutoLayout = Ext.create('Ext.form.Panel', {
-        title: 'Переключатели',
-        width: 400,
-        autoHeight: true,
-        bodyPadding: 5,
-        items: [{
-            xtype: 'radiogroup',
-            fieldLabel: 'Пол',
-            items: [{
-            boxLabel: 'Мужской',
-            name: 'gender',
-            inputValue: 'male'
-            }, {
-            boxLabel: 'Женский',
-            name: 'gender',
-            inputValue: 'female'
-            }]
-        }],
-        renderTo: Ext.getBody(),
-        style: 'margin: 10px'
-    });
+Ext JS Kitchen Sink
+Examples
+Search
+DetailsPremium
+/**
+ * This example shows how to zoom in on the selected node with an animation
+ * in the 'd3-sunburst' component. Here, the visibility of the nodes is controlled
+ * by the zoom level, not the `expanded` property. For this, we set
+ * `expandEventName` config to false.
+ */
+Ext.define('KitchenSink.view.d3.SunburstZoom', {
+    extend: 'Ext.panel.Panel',
+    xtype: 'd3-view-sunburst-zoom',
+    controller: 'sunburst-zoom',
 
-var radioGroupAutoLayout = Ext.create('Ext.form.Panel', {
-        title: 'Переключатели',
-        width: 300,
-        autoHeight: true,
-        bodyPadding: 5,
-        items: [{
-            xtype: 'radiogroup',
-            columns: 2,
-            vertical: true,
-            items: [{
-            boxLabel: 'Капуста',
-            name: 'veg',
-            inputValue: 'cabbage'
-            }, {
-            boxLabel: 'Морковь',
-            name: 'veg',
-            inputValue: 'carrot'
-            }, {
-            boxLabel: 'Свекла',
-            name: 'veg',
-            inputValue: 'beat'
-            }, {
-            boxLabel: 'Лук',
-            name: 'veg',
-            inputValue: 'onion'
-            }]
-        }],
-        renderTo: Ext.getBody(),
-        style: 'margin: 10px'
-    });
+    requires: [
+        'KitchenSink.view.d3.TreeViewModel',
+        'Ext.d3.hierarchy.partition.Sunburst'
+    ],
 
-    var checkboxGroup = new Ext.form.CheckboxGroup({
-        columns: 1,
-        fieldLabel: 'Овощи',
-        name: 'veg',
-        style: {
-        padding: '5px 10px 5px 10px'
+    width: 1200,
+    height: 700,
+
+    layout: 'border',
+
+    viewModel: {
+        type: 'tree'
+    },
+
+    items: [
+        {
+            xtype: 'breadcrumb',
+            region: 'north',
+
+            bind: {
+                store: '{store}',
+                selection: '{selection}'
+            },
+
+            publishes: 'selection'
         },
-        items: [{
-            xtype: 'checkbox',
-            boxLabel: 'Капуста',
-            name: 'veg',
-            inputValue: 'cabbage',
-            checked:'true',
-        }, {
-            xtype: 'checkbox',
-            boxLabel: 'Морковь',
-            name: 'veg',
-            inputValue: 'carrot'
-        }, {
-            xtype: 'checkbox',
-            boxLabel: 'Свекла',
-            labelAlign: 'left',
-            name: 'veg',
-            inputValue: 'beat'
-        }, {
-            xtype: 'checkbox',
-            boxLabel: 'Лук',
-            labelAlign: 'right',
-            name: 'veg',
-            inputValue: 'onion'
-        }]
-        });
-        var panel = new Ext.Panel({
-            renderTo: Ext.getBody(),
-            title: 'Овощи',
-            width:200,
-            height:150,
-            items: [checkboxGroup]
-    });
+        {
+            region: 'center',
 
+            xtype: 'panel',
+            layout: 'fit',
+
+            items: {
+                xtype: 'd3-sunburst',
+                reference: 'd3',
+                padding: 20,
+                bind: {
+                    store: '{store}',
+                    selection: '{selection}'
+                },
+                transitions: {
+                    select: false
+                },
+                listeners: {
+                    selectionchange: 'onSelectionChange'
+                },
+                expandEventName: false
+            }
+        }
+    ]
 });
+()
